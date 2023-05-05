@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="CommandBar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CommandBar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <CommandBar Grid.Row="0" Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" IsDynamicOverflowEnabled="True">
+            <AppBarButton Icon="Add" Label="Add"/>
+            <AppBarButton Icon="Edit" Label="Edit"/>
+            <AppBarButton Icon="Share" Label="Share"/>
+            <AppBarButton Icon="Setting" Label="Settings">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Control" Key="A" Invoked="KeyboardAccelerator_Invoked"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton Icon="Add" Label="Button 1">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Control" Key="B" Invoked="KeyboardAccelerator_Invoked"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton Icon="FontDecrease" Label="Button 2">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Control" Key="C" Invoked="KeyboardAccelerator_Invoked"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton Icon="FontIncrease" Label="Button 3">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Control" Key="D" Invoked="KeyboardAccelerator_Invoked"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton Icon="Delete" Label="Button 4">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Delete" Invoked="KeyboardAccelerator_Invoked"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+        </CommandBar>
+
+        <TextBlock x:Name="key_details"  Grid.Row="1"></TextBlock>
+        
+    </Grid>
+</Page>
